@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WinBackup — резервное копирование для Windows</title>
+  <meta name="description" content="WinBackup — программа резервного копирования файлов и баз данных для Windows-серверов: архивы с паролем, сетевые папки, SFTP, FTP, WebDAV, S3, Google Диск.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">WinBackup</a>
+    <nav>
+      <a href="./" aria-current="page">О программе</a>
+      <a href="privacy.html">Конфиденциальность</a>
+      <a href="terms.html">Условия</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>WinBackup</h1>
+  <p class="lead">Резервное копирование файлов и баз данных для Windows-серверов.</p>
+  <p>WinBackup — это служба Windows, которая по расписанию сохраняет копии файлов и баз данных, и окно
+    программы для её настройки. Программа устанавливается на собственный сервер организации и работает на нём.</p>
+
+  <h2>Возможности</h2>
+  <ul>
+    <li>копирование папок и файлов, выгрузка баз 1С (BAF), Microsoft SQL Server и PostgreSQL;</li>
+    <li>архивы 7-Zip и ZIP с шифрованием AES-256;</li>
+    <li>сохранение копий сразу в несколько мест: локальные и внешние диски, сетевые папки (SMB), SFTP,
+      FTP/FTPS, WebDAV, хранилища S3 и Google Диск;</li>
+    <li>хранение заданного числа последних копий, восстановление из архива, перенос копий между хранилищами;</li>
+    <li>уведомления о результатах по почте и в Telegram;</li>
+    <li>пользователи с правами по каталогам, доступ к окну программы по сети только через HTTPS.</li>
+  </ul>
+
+  <h2>Google Диск</h2>
+  <div class="card">
+    <p>Если в WinBackup выбрать Google Диск местом хранения копий, программа попросит доступ к Диску через
+      окно входа Google. По умолчанию — только к файлам и папкам, которые создаёт сама программа
+      (<code>drive.file</code>): остальное содержимое Диска ей не видно.</p>
+    <p>Доступ используется только для резервного копирования: программа создаёт папку для копий, загружает в
+      неё архивы, показывает их список, удаляет устаревшие копии по заданному правилу хранения и скачивает
+      копию для восстановления. Данные идут напрямую между сервером организации и Google — разработчик их не
+      получает. Подробно — в <a href="privacy.html">политике конфиденциальности</a>.</p>
+  </div>
+
+  <h2>Кто пользуется</h2>
+  <p>WinBackup не распространяется публично: программу устанавливает администратор на сервер своей
+    организации. Вопросы о работе программы — этому администратору.</p>
+
+  <section class="lang" id="en" lang="en">
+    <h1>WinBackup</h1>
+    <p class="lead">File and database backup for Windows servers.</p>
+    <p>WinBackup is a Windows service that backs up files and databases on a schedule, plus a desktop window to
+      configure it. It is installed on and runs on the organization's own server.</p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>backup of folders and files, dumps of 1C (BAF), Microsoft SQL Server and PostgreSQL databases;</li>
+      <li>7-Zip and ZIP archives with AES-256 encryption;</li>
+      <li>copies saved to several destinations at once: local and external disks, network shares (SMB), SFTP,
+        FTP/FTPS, WebDAV, S3-compatible storage and Google Drive;</li>
+      <li>keeping a set number of recent copies, restore from an archive, moving copies between storages;</li>
+      <li>result notifications by email and Telegram;</li>
+      <li>users with per-folder permissions; network access to the window only over HTTPS.</li>
+    </ul>
+
+    <h2>Google Drive</h2>
+    <div class="card">
+      <p>When Google Drive is chosen as a backup destination, WinBackup asks for access to the Drive through the
+        Google sign-in window. By default it requests access only to the files and folders the app itself creates
+        (<code>drive.file</code>); the rest of the Drive is not visible to it.</p>
+      <p>The access is used for backups only: the app creates a folder for copies, uploads archives into it, lists
+        them, deletes outdated copies according to the configured retention rule and downloads a copy for restore.
+        Data travels directly between the organization's server and Google; the developer does not receive it.
+        See the <a href="privacy.html#en">privacy policy</a> for details.</p>
+    </div>
+
+    <h2>Who uses it</h2>
+    <p>WinBackup is not distributed publicly: an administrator installs it on their organization's server.
+      Questions about the app should go to that administrator.</p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <a href="privacy.html">Политика конфиденциальности / Privacy Policy</a> ·
+    <a href="terms.html">Условия использования / Terms of Service</a>
+  </div>
+</footer>
+</body>
+</html>

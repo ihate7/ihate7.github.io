@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Политика конфиденциальности — WinBackup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">WinBackup</a>
+    <nav>
+      <a href="./">О программе</a>
+      <a href="privacy.html" aria-current="page">Конфиденциальность</a>
+      <a href="terms.html">Условия</a>
+      <a href="#en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <h1>Политика конфиденциальности WinBackup</h1>
+  <p class="updated">Действует с 23 ноября 2026 г.</p>
+
+  <p>WinBackup — программа резервного копирования, которую администратор устанавливает на собственный сервер
+    организации. Эта политика описывает, как программа работает с данными аккаунта Google, когда в ней подключён
+    Google Диск.</p>
+
+  <h2>Какие данные Google получает программа</h2>
+  <ul>
+    <li><strong>Доступ к Google Диску</strong> через Google API. По умолчанию — область
+      <code>https://www.googleapis.com/auth/drive.file</code>: программа видит только файлы и папки, которые
+      создала сама. Если администратор сам выберет в настройках ресурса доступ ко всему Диску
+      (<code>https://www.googleapis.com/auth/drive</code>), программа получит доступ ко всем файлам Диска, но
+      использует его только так, как описано ниже.</li>
+    <li><strong>Адрес электронной почты и имя аккаунта, сведения о занятом и свободном месте</strong> на Диске —
+      чтобы показать в окне программы, к какому Диску она подключена.</li>
+  </ul>
+
+  <h2>Как программа использует эти данные</h2>
+  <p>Только для резервного копирования по настройкам пользователя: создать папку для копий, загрузить в неё
+    архивы и файлы копий, получить их список, удалить устаревшие копии по правилу хранения, скачать копию для
+    восстановления или переноса в другое хранилище. Других действий с Диском программа не выполняет.</p>
+
+  <h2>Где хранятся данные</h2>
+  <ul>
+    <li>Разрешение на доступ (ключ OAuth, refresh token) хранится только на сервере, где установлена программа,
+      в зашифрованном виде (AES-256-GCM; ключ шифрования защищён средствами Windows).</li>
+    <li>Содержимое копий хранится на Google Диске пользователя. Архивы можно зашифровать паролем — тогда их
+      содержимое недоступно без пароля.</li>
+    <li>Журналы работы программы (имена файлов и папок копий, результаты запусков) хранятся на том же сервере.</li>
+  </ul>
+
+  <h2>Передача данных</h2>
+  <p>Данные передаются только напрямую между сервером пользователя и Google по защищённому соединению (HTTPS).
+    Разработчик WinBackup не получает данных пользователей: у программы нет собственного сервера, она не
+    отправляет статистику, не показывает рекламу и не передаёт данные третьим лицам. Данные, полученные от
+    Google, не используются для рекламы и для обучения моделей искусственного интеллекта.</p>
+  <p>Уведомления о результатах заданий программа отправляет только туда, куда их настроил сам администратор
+    (почта, Telegram). Они содержат название задания и итог запуска, но не содержимое копий.</p>
+
+  <h2>Соблюдение правил Google</h2>
+  <p>Использование и передача WinBackup информации, полученной через Google API, соответствуют
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    включая требования Limited Use.</p>
+
+  <h2>Как отозвать доступ и удалить данные</h2>
+  <ul>
+    <li>Отозвать доступ можно в любой момент: Аккаунт Google → Безопасность → «Сторонние приложения и сервисы»
+      (<a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>). После этого
+      программа больше не может обращаться к Диску.</li>
+    <li>При удалении ресурса «Google Диск» в программе сохранённый ключ доступа удаляется с сервера.</li>
+    <li>Копии на Google Диске — это файлы пользователя: их можно удалить на Диске как обычные файлы.</li>
+  </ul>
+
+  <h2>Изменения политики</h2>
+  <p>Новая редакция публикуется на этой странице с новой датой.</p>
+
+  <h2>Контакты</h2>
+  <p>Вопросы о программе и этой политике — администратору, который установил вам WinBackup, или через
+    <a href="https://github.com/ihate7/ihate7.github.io/issues">github.com/ihate7/ihate7.github.io/issues</a>.</p>
+
+  <section class="lang" id="en" lang="en">
+    <h1>WinBackup Privacy Policy</h1>
+    <p class="updated">Effective November 23, 2026.</p>
+
+    <p>WinBackup is a backup application that an administrator installs on their organization's own server. This
+      policy describes how the app handles Google account data when Google Drive is connected to it.</p>
+
+    <h2>Google data the app accesses</h2>
+    <ul>
+      <li><strong>Access to Google Drive</strong> through Google APIs. By default the scope
+        <code>https://www.googleapis.com/auth/drive.file</code>: the app sees only the files and folders it created.
+        If the administrator chooses full Drive access in the resource settings
+        (<code>https://www.googleapis.com/auth/drive</code>), the app gets access to all Drive files but uses it only
+        as described below.</li>
+      <li><strong>The account email address and name, Drive used and free space</strong> — to show in the app window
+        which Drive it is connected to.</li>
+    </ul>
+
+    <h2>How the app uses this data</h2>
+    <p>Only for backups configured by the user: create a folder for copies, upload backup archives and files into it,
+      list them, delete outdated copies according to the retention rule, and download a copy to restore it or move it
+      to another storage. The app performs no other actions on the Drive.</p>
+
+    <h2>Where data is stored</h2>
+    <ul>
+      <li>The access grant (OAuth refresh token) is stored only on the server where the app is installed, encrypted
+        (AES-256-GCM; the encryption key is protected by Windows).</li>
+      <li>Backup contents are stored on the user's Google Drive. Archives can be password-encrypted, making their
+        contents unreadable without the password.</li>
+      <li>The app's logs (names of backup files and folders, run results) are stored on the same server.</li>
+    </ul>
+
+    <h2>Data sharing</h2>
+    <p>Data travels only directly between the user's server and Google over a secure connection (HTTPS). The developer
+      of WinBackup does not receive user data: the app has no server of its own, sends no statistics, shows no ads and
+      does not share data with third parties. Data received from Google is not used for advertising or for training
+      artificial intelligence models.</p>
+    <p>Job result notifications are sent only where the administrator configured them (email, Telegram). They contain
+      the job name and the run result, not the backup contents.</p>
+
+    <h2>Compliance with Google policies</h2>
+    <p>WinBackup's use and transfer to any other app of information received from Google APIs will adhere to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.</p>
+
+    <h2>Revoking access and deleting data</h2>
+    <ul>
+      <li>Access can be revoked at any time: Google Account → Security → "Third-party apps &amp; services"
+        (<a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>). After that the app
+        can no longer access the Drive.</li>
+      <li>Deleting the Google Drive resource in the app removes the stored access grant from the server.</li>
+      <li>Backups on Google Drive are the user's own files and can be deleted on the Drive like any other files.</li>
+    </ul>
+
+    <h2>Changes</h2>
+    <p>A new version is published on this page with a new date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about the app and this policy — to the administrator who installed WinBackup for you, or via
+      <a href="https://github.com/ihate7/ihate7.github.io/issues">github.com/ihate7/ihate7.github.io/issues</a>.</p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <a href="./">WinBackup</a> ·
+    <a href="terms.html">Условия использования / Terms of Service</a>
+  </div>
+</footer>
+</body>
+</html>
